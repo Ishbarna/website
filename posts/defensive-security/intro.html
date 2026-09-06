@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An introduction to the core disciplines of defensive security.">
+  <title>Defensive Security, in Four Pieces | Ishbarna Kafle</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header"><a class="brand" href="../../index.html"><span>~/</span>ishbarna</a><nav class="site-nav" aria-label="Primary navigation"><a href="../../index.html#posts">Posts</a><a href="https://github.com/ishbarna">GitHub</a></nav><button class="theme-button" data-theme-toggle aria-label="Toggle color theme"><span class="sun">&#9788;</span><span class="moon">&#9790;</span></button></header>
+    <main class="article">
+      <a class="back-link" href="../../index.html">&#8592; back to posts</a>
+      <p class="post-label">TryHackMe / Foundations</p>
+      <h1>Defensive Security, in Four Pieces</h1>
+      <p class="post-meta"><span>May 5, 2025</span><span>4 min read</span></p>
+      <div class="article-body">
+        <p>Defensive security is the part of cybersecurity focused on keeping systems resilient, spotting suspicious activity, and responding when prevention is not enough. It is quieter than an exploit writeup, but it is what keeps a small incident from becoming a major breach.</p>
+        <h2>The core areas</h2>
+        <div class="term-grid"><div class="term"><strong>Threat Intelligence</strong><span>Collecting and analyzing information about attackers, tools, infrastructure, habits, and targets so defenders can anticipate threats.</span></div><div class="term"><strong>SOC</strong><span>A Security Operations Center monitors dashboards and alerts, separates routine noise from real threats, and coordinates the first response.</span></div><div class="term"><strong>DFIR</strong><span>Digital Forensics and Incident Response reconstructs what happened from logs, memory, and file-system evidence, then contains and recovers from the incident.</span></div><div class="term"><strong>Malware Analysis</strong><span>Studying malicious software statically or in a controlled environment to understand its behavior and create useful detections.</span></div></div>
+        <h2>Where SIEM fits</h2>
+        <p>A SIEM, or security information and event management system, brings the four areas together by collecting logs and alerts from across an environment. This aggregation gives analysts the context needed to connect events and find the one meaningful signal among thousands of routine entries.</p>
+        <h2>The response lifecycle</h2>
+        <p>These disciplines support a repeating lifecycle: prepare, detect, contain, eradicate, recover, and review. Preparation improves visibility, detection starts the investigation, containment limits damage, and the review feeds lessons back into the next round of preparation.</p>
+        <p>The important takeaway is that defensive security is a connected practice. Intelligence informs monitoring, monitoring creates evidence, forensics explains the incident, and malware analysis turns what was learned into better controls and detections.</p>
+      </div>
+      <div class="callout"><p>The full walkthrough, with the room's tasks and answers, is on Medium.</p><a class="button" href="https://ishbarna.medium.com/defensive-security-intro-df006f9742ee" target="_blank" rel="noopener">Read on Medium &#8594;</a></div>
+      <nav class="article-nav" aria-label="Post navigation"><a class="button secondary" href="../../index.html">Back to Home &#8594;</a></nav>
+    </main>
+    <footer>built by ishbarna &middot; Kathmandu, Nepal</footer>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+</html>

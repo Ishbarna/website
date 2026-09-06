@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A picoCTF head-dump challenge overview.">
+  <title>head-dump | Ishbarna Kafle</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header"><a class="brand" href="../../index.html"><span>~/</span>ishbarna</a><nav class="site-nav" aria-label="Primary navigation"><a href="../../index.html#posts">Posts</a><a href="https://github.com/ishbarna">GitHub</a></nav><button class="theme-button" data-theme-toggle aria-label="Toggle color theme"><span class="sun">&#9788;</span><span class="moon">&#9790;</span></button></header>
+    <main class="article">
+      <a class="back-link" href="../../index.html">&#8592; back to posts</a>
+      <p class="post-label">picoCTF / Web Exploitation</p>
+      <h1>head-dump: When API Docs Say Too Much</h1>
+      <p class="post-meta"><span>May 6, 2025</span><span>3 min read</span><span>50 points</span></p>
+      <div class="article-body">
+        <p>In picoCTF 2025's 50-point head-dump challenge, the goal is to find a hidden flag inside a server memory dump. The challenge tests a practical skill: reading API documentation, identifying useful endpoints, and searching messy output for a small secret.</p>
+        <h2>Challenge overview</h2>
+        <p>The starting point is a basic blog application. Exploring its pages reveals an API Documentation link, which opens <code>/api-docs</code> and a Swagger UI. Swagger lists the routes exposed by the application and lets you inspect or execute them from the browser.</p>
+        <h2>Find the diagnostic endpoint</h2>
+        <p>The useful route appears under the Diagnosing section. Searching the documentation for terms such as <code>diagnosing</code>, <code>dump</code>, or <code>heap</code> leads to <code>/heapdump</code>. Its description hints that it generates a memory dump, matching the challenge name.</p>
+        <p>Execute the endpoint from Swagger and download the returned file. The dump is too large to inspect manually, so open it in a text editor or search it from the command line. Searching for <code>pico</code> or the expected flag prefix quickly surfaces the flag inside the raw output.</p>
+        <h2>Lessons from the challenge</h2>
+        <p>The solution is simple once the right route is found: explore the application, read its API documentation, identify the heap dump endpoint, download the file, and search it. In a real application, diagnostic endpoints that expose memory, configuration, or logs should be removed from production or protected by strong authentication.</p>
+      </div>
+      <div class="callout"><p>The full writeup with the exact request flow and commands is on Medium.</p><a class="button" href="https://ishbarna.medium.com/picoctf-head-dump-fe99642960cd" target="_blank" rel="noopener">Read on Medium &#8594;</a></div>
+      <nav class="article-nav" aria-label="Post navigation"><a class="button secondary" href="../defensive-security/intro.html">Next: Defensive Security &#8594;</a></nav>
+    </main>
+    <footer>built by ishbarna &middot; Kathmandu, Nepal</footer>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+</html>

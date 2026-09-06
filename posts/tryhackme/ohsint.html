@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OSINT lessons from the TryHackMe OhSINT room.">
+  <title>OSINT from a Single Image | Ishbarna Kafle</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="../../index.html"><span>~/</span>ishbarna</a>
+      <nav class="site-nav" aria-label="Primary navigation"><a href="../../index.html#posts">Posts</a><a href="https://github.com/ishbarna">GitHub</a></nav>
+      <button class="theme-button" data-theme-toggle aria-label="Toggle color theme"><span class="sun">&#9788;</span><span class="moon">&#9790;</span></button>
+    </header>
+    <main class="article">
+      <a class="back-link" href="../../index.html">&#8592; back to posts</a>
+      <p class="post-label">TryHackMe / OSINT</p>
+      <h1>OhSINT TryHackMe | Walkthrough | OhSINT</h1>
+      <p class="post-meta"><span>March 7, 2026</span><span>5 min read</span></p>
+      <div class="article-body">
+        <p>OhSINT is a TryHackMe OSINT room built around a single image. The goal is not to brute-force anything; it is to investigate carefully and connect small pieces of public information until they answer the room's questions.</p>
+        <h2>Start with the image</h2>
+        <p>Before searching for usernames or locations, inspect the file itself. EXIF metadata can expose a camera model, GPS coordinates, timestamps, and an author or copyright field. A metadata viewer gives the investigation its first useful lead and helps separate evidence from guesses.</p>
+        <h2>Pivot across public profiles</h2>
+        <p>Use the name or handle found in the image metadata as a search pivot. Check public social profiles, code-hosting pages, profile bios, and posts. Each source may reveal another username, place, interest, or account. Record every pivot and confirm it against more than one source before treating it as an answer.</p>
+        <h2>Follow the network clue</h2>
+        <p>The BSSID is the hardware address of a wireless access point. Public wardriving databases can sometimes map that identifier to an SSID and an approximate location. It is a good example of how infrastructure data can become useful OSINT when it is combined with other clues.</p>
+        <h2>What the room teaches</h2>
+        <p>OhSINT builds a repeatable reconnaissance habit: inspect every artifact, pivot from each lead, document the path, and verify the final picture. The flags are useful, but the real skill is learning how apparently harmless public details can connect.</p>
+      </div>
+      <div class="callout"><p>The full walkthrough with commands, tools, and screenshots is on Medium.</p><a class="button" href="https://ishbarna.medium.com/ohsint-204b595a5248" target="_blank" rel="noopener">Read on Medium &#8594;</a></div>
+      <nav class="article-nav" aria-label="Post navigation"><a class="button secondary" href="../picoctf/head-dump.html">Next: head-dump &#8594;</a></nav>
+    </main>
+    <footer>built by ishbarna &middot; Kathmandu, Nepal</footer>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+</html>
